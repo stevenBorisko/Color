@@ -1,6 +1,6 @@
 COLOR_PATH := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 COLOR_MAIN_OBJ := $(COLOR_PATH)Color.o
-COLOR_CFLAGS := -std=c++11 -O3
+COLOR_CFLAGS := -std=c++17 -O3
 COLOR_LFLAGS :=
 
 COLOR_OBJDIR := $(COLOR_PATH).ObjectFiles/
