@@ -169,4 +169,9 @@ struct ColorRGBc {
 	friend std::ostream& operator<<(std::ostream& os, const ColorRGBc& c);
 };
 
+/*
+Conversions between HS? and RGB were taken from Algorithms 8.6.{1-4} in
+Agoston's book, "Computer Graphics and Geometric Modeling" 
+*/
+
 #endif
