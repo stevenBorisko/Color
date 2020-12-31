@@ -4,7 +4,7 @@ project(color)
 enable_testing()
 find_package(GTest REQUIRED)
 enable_language(CXX)
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
 add_executable(
     unit_test
