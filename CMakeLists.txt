@@ -8,9 +8,12 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(
     unit_test
-    test/hsl.cpp
-    test/hsv.cpp
-    test/rgb.cpp)
+    ${CMAKE_CURRENT_LIST_DIR}/test/convert_to_hsl.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/test/convert_to_hsv.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/test/convert_to_rgb.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/test/hsl.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/test/hsv.cpp
+    ${CMAKE_CURRENT_LIST_DIR}/test/rgb.cpp)
 target_include_directories(
     unit_test PUBLIC
     ${CMAKE_CURRENT_LIST_DIR}/include/

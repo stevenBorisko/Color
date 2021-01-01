@@ -31,7 +31,7 @@ TEST (HSLConstructorValues, ThrowsOnUndefinedHueWithNonZeroSaturation)
 TEST (HSLConstructorValues, ThrowsOnOutOfRangeInput)
 {
     ASSERT_THROW ((color::hsl {-1, 1, 0}), color::exception);
-    ASSERT_THROW ((color::hsl {361, 1, 0}), color::exception);
+    ASSERT_THROW ((color::hsl {360, 1, 0}), color::exception);
     ASSERT_THROW ((color::hsl {0, -1, 0}), color::exception);
     ASSERT_THROW ((color::hsl {0, 2, 0}), color::exception);
     ASSERT_THROW ((color::hsl {0, 1, -1}), color::exception);
@@ -97,41 +97,41 @@ TEST (HSLWhite, InitializesToWhite)
 TEST (HSLRed, InitializesToRed)
 {
     auto const color_l = color::hsl::red();
-    auto const color_r = color::hsl {0, 0.5, 1};
+    auto const color_r = color::hsl {0, 1, 0.5};
     ASSERT_EQ (color_l, color_r);
 }
 
 TEST (HSLYellow, InitializesToYellow)
 {
     auto const color_l = color::hsl::yellow();
-    auto const color_r = color::hsl {60, 0.5, 1};
+    auto const color_r = color::hsl {60, 1, 0.5};
     ASSERT_EQ (color_l, color_r);
 }
 
 TEST (HSLGreen, InitializesToGreen)
 {
     auto const color_l = color::hsl::green();
-    auto const color_r = color::hsl {120, 0.5, 1};
+    auto const color_r = color::hsl {120, 1, 0.5};
     ASSERT_EQ (color_l, color_r);
 }
 
 TEST (HSLCyan, InitializesToCyan)
 {
     auto const color_l = color::hsl::cyan();
-    auto const color_r = color::hsl {180, 0.5, 1};
+    auto const color_r = color::hsl {180, 1, 0.5};
     ASSERT_EQ (color_l, color_r);
 }
 
 TEST (HSLBlue, InitializesToBlue)
 {
     auto const color_l = color::hsl::blue();
-    auto const color_r = color::hsl {240, 0.5, 1};
+    auto const color_r = color::hsl {240, 1, 0.5};
     ASSERT_EQ (color_l, color_r);
 }
 
 TEST (HSLMagenta, InitializesToMagenta)
 {
     auto const color_l = color::hsl::magenta();
-    auto const color_r = color::hsl {300, 0.5, 1};
+    auto const color_r = color::hsl {300, 1, 0.5};
     ASSERT_EQ (color_l, color_r);
 }

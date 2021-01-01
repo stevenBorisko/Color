@@ -31,7 +31,7 @@ TEST (HSVConstructorValues, ThrowsOnUndefinedHueWithNonZeroSaturation)
 TEST (HSVConstructorValues, ThrowsOnOutOfRangeInput)
 {
     ASSERT_THROW ((color::hsv {-1, 1, 0}), color::exception);
-    ASSERT_THROW ((color::hsv {361, 1, 0}), color::exception);
+    ASSERT_THROW ((color::hsv {360, 1, 0}), color::exception);
     ASSERT_THROW ((color::hsv {0, -1, 0}), color::exception);
     ASSERT_THROW ((color::hsv {0, 2, 0}), color::exception);
     ASSERT_THROW ((color::hsv {0, 1, -1}), color::exception);
